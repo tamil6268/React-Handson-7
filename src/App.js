@@ -1,11 +1,15 @@
 import './App.css';
-import Area from './Routes/Area'
-function App() {
+import Nav from './Components/Nav'
+import Main from './Routes/Main'
+import { Provider } from 'react-redux';
+import store from './Redux/store';
+const App = () => {
   return (
-    <div>
-      <Area />
-    </div>
-  );
+    <Provider store={store}>
+      <Nav />
+      <Main />
+    </Provider>
+  )
 }
 
 export default App;
